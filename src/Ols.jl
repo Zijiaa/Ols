@@ -1,6 +1,18 @@
 
 using LinearAlgebra
 
+
+module Ols
+
+
+include("chadminus.jl")
+include("fixmissing.jl")
+include("packr.jl")
+include("vdummy.jl")
+
+export ols
+
+
 function ols(y,x,title,depv,indv,prevest)
      if all(x[:,1].!=1)
         println("No constant term in regression")
@@ -91,3 +103,6 @@ function ols(y,x,title,depv,indv,prevest)
 
     return beta, diag(se) ,diag(tstat), diag(roberr),diag(trob);
 end 
+
+
+
