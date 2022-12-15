@@ -1,16 +1,11 @@
 
-using LinearAlgebra
-
-
 module Ols
 
 
-include("chadminus.jl")
-include("fixmissing.jl")
-include("packr.jl")
-include("vdummy.jl")
+using LinearAlgebra
 
-export ols
+
+
 
 
 function ols(y,x,title,depv,indv,prevest)
@@ -104,5 +99,11 @@ function ols(y,x,title,depv,indv,prevest)
     return beta, diag(se) ,diag(tstat), diag(roberr),diag(trob);
 end 
 
+export ols
+include("chadminus.jl")
+include("fixmissing.jl")
+include("packr.jl")
+include("vdummy.jl")
 
 
+end
