@@ -1,0 +1,13 @@
+name = "Ols"
+uuid = "c5dae5e5-91e5-469c-b9e1-87cf0c3e07c3"
+authors = ["Zijiaa01~ <liu_zj0705@163.com> and contributors"]
+version = "0.1.0"
+
+[compat]
+julia = "1.5"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
